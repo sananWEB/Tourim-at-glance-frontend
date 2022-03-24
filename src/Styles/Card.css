@@ -1,0 +1,72 @@
+.appCard {
+  height: 500px;
+  @apply flex relative flex-col w-96 border hover:shadow-lg;
+}
+.appCard__img {
+  height: 400px;
+  @apply w-full;
+}
+
+.appCard::before {
+  content: "";
+  background: rgba(0, 0, 0, 0.6);
+  @apply absolute inset-0 w-0 transition-all duration-300;
+}
+
+.appCard:hover::before {
+  content: "";
+  background: rgba(0, 0, 0, 0.6);
+  @apply absolute inset-0 w-full transition-all duration-300;
+}
+
+/* Card info */
+.card__info {
+  @apply flex flex-col ml-3;
+}
+
+/* Buttons */
+.card__btn {
+  @apply flex flex-col absolute gap-6 inset-0 justify-center items-center opacity-0;
+}
+.appCard:hover .card__btn {
+  opacity: 1;
+}
+.card__order {
+  @apply relative hover:text-white hover:shadow-lg  w-32 bg-gradient-to-r from-blue-400 to-blue-700 py-2 font-bold tracking-wide text-gray-800;
+}
+.card__order::before {
+  content: "";
+  @apply h-0 inset-0 bg-blue-600 opacity-50 transition-all duration-500;
+}
+.card__order:hover::before {
+  content: "";
+  @apply absolute h-full inset-0 bg-blue-900;
+}
+.card__details {
+  @apply w-32 hover:text-white hover:shadow-lg  relative bg-gradient-to-r from-yellow-600 to-yellow-800 py-2 font-bold tracking-wide text-gray-800;
+}
+.card__details::before {
+  content: "";
+  @apply h-0 inset-0 bg-yellow-600 opacity-50 transition-all duration-500;
+}
+.card__details:hover::before {
+  content: "";
+  @apply absolute h-full inset-0 bg-yellow-900;
+}
+
+.card__bottom {
+  @apply opacity-0 bg-yellow-400 absolute right-0 bottom-0 w-full h-24 flex items-center justify-center flex-col;
+}
+.card__bottom p {
+  cursor: default;
+}
+.appCard:hover .card__bottom {
+  opacity: 1;
+}
+
+@media (max-width: 780px) {
+  .appCard {
+    height: 500px;
+    @apply flex relative flex-col w-80 border hover:shadow-lg;
+  }
+}

@@ -1,0 +1,122 @@
+.navbar__nav {
+  @apply flex gap-10 justify-between items-center h-24 bg-gray-100;
+}
+.navbar__icons {
+  @apply w-full flex mx-10 items-center;
+}
+.navbar__toggle {
+  /* display: none; */
+  /* @apply text-3xl bg-red-300; */
+}
+
+.navbar__bar {
+  display: none;
+  transition: 0.4s ease-in;
+  @apply text-5xl bg-gray-300 p-1 text-gray-800 rounded cursor-pointer hover:bg-white;
+}
+.navbar__bar:hover {
+  transform: rotate(90deg);
+  @apply rounded-xl text-purple-600;
+}
+
+.navbar__menu {
+  @apply flex justify-evenly w-full;
+}
+
+.navbar__items {
+  @apply cursor-pointer text-lg tracking-wide relative text-gray-500 font-bold;
+}
+.navbar__items::before {
+  content: "";
+  height: 2px;
+  @apply transition-all  duration-300 absolute w-0  bottom-0 left-0 bg-yellow-500;
+}
+
+.navbar__items:hover * {
+  @apply text-gray-700;
+}
+.navbar__items:hover::before {
+  content: "";
+  height: 2px;
+  @apply absolute   w-full  bottom-0 left-0 bg-yellow-500;
+}
+
+.navbar__dropdown {
+  display: none;
+  z-index: 80;
+}
+.navbar__show {
+  @apply flex;
+}
+.navbar__dropdown {
+  display: flex;
+  @apply absolute right-0 flex-col justify-evenly w-60
+    h-52 bg-white border text-black rounded-xl items-center pt-3;
+}
+.dropdown__option {
+  @apply text-gray-600 font-bold py-2 hover:shadow-2xl px-4 hover:bg-purple-700 rounded-lg hover:text-white;
+}
+
+.trip__items a {
+  @apply hover:text-white;
+}
+.navbar__trips {
+  @apply flex;
+}
+.navbar__showtrips {
+  display: none;
+  z-index: 999;
+  /* @apply ; */
+}
+.navbar__showtrips {
+  @apply flex flex-col items-center hover:text-white absolute top-14 bg-white h-32 w-56 rounded-lg;
+}
+.trip__items {
+  @apply mt-4 text-gray-600 font-bold py-2 hover:shadow-2xl px-4 hover:bg-purple-700 rounded-lg hover:text-white;
+}
+/* Media screen for mobile view */
+
+@media (max-width: 990px) {
+  .navbar__bar {
+    display: flex;
+  }
+  .navbar__items {
+    font-size: 15px;
+    @apply tracking-wide p-4  text-gray-900;
+  }
+  /* .navbar__items Link {
+    @apply border py-10 w-full h-full hover:bg-gray-200;
+  } */
+  /* .navbar__items:hover::before {
+    content: "";
+    @apply w-0;
+  } */
+
+  .navbar__menu {
+    height: 85vh;
+    z-index: 999;
+    @apply transition-all duration-300 absolute top-0 mt-24 flex flex-col w-full
+    bg-gray-100 justify-start items-center;
+  }
+  .navbar__menu.active {
+    left: -100%;
+    opacity: 0;
+    transition: 0.3s ease-in;
+    /* clip-path: polygon(0, 0, 100%, 100%); */
+    /* @apply left-0; */
+  }
+  .navbar__trips:hover .navbar__showtrips {
+    @apply flex flex-col items-center hover:text-white absolute top-7 bg-white h-32 w-56 rounded-lg;
+  }
+  .navbar__show:hover .navbar__dropdown {
+    display: flex;
+    @apply absolute left-0 flex-col justify-evenly w-60
+      h-52 bg-white border text-black rounded-xl items-center pt-3;
+  }
+  .navbar__trips {
+    @apply pl-4;
+  }
+  .navbar__icons {
+    @apply w-full justify-between flex mx-10 items-center;
+  }
+}

@@ -1,0 +1,15 @@
+.mainpage__container {
+  background: url("../image/mainpage3.jpg") no-repeat;
+  /* background:; */
+  background-color: rgba(0, 0, 0, 0.3);
+  @apply h-screen w-screen bg-cover bg-blend-overlay;
+}
+.mainpage__container p {
+  @apply text-center text-transparent bg-clip-text bg-gradient-to-t from-white to-red-300 capitalize tracking-wider text-4xl font-bold;
+}
+
+@media (max-width: 580px) {
+  .mainpage__container p {
+    @apply text-2xl;
+  }
+}

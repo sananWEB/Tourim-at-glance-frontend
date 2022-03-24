@@ -1,0 +1,20 @@
+/* Buttons Start */
+.card__moreBtn {
+  transition: all 0.3s ease-in-out;
+  background: linear-gradient(to right, orange, orangered);
+  @apply h-10 my-3 w-32 border-none outline-none font-bold text-white;
+}
+.card__moreBtn:hover {
+  box-shadow: 0 0 4px 1px orangered;
+  background: linear-gradient(to right, orangered, orange);
+}
+.card__bookBtn {
+  transition: all 0.3s ease-in-out;
+  background: linear-gradient(to right, cyan, rgb(241, 86, 241));
+  @apply h-10 w-32 border-none outline-none font-bold text-black;
+}
+.card__bookBtn:hover {
+  box-shadow: 0 0 4px 1px purple;
+  background: linear-gradient(to right, rgb(241, 86, 241), cyan);
+}
+/* Buttons Ends */

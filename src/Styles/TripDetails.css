@@ -1,0 +1,16 @@
+.tripdetail__container {
+  @apply flex flex-col py-3 px-6;
+}
+.tripdetail__container img {
+  @apply h-96 w-screen rounded-2xl;
+}
+.tripdetail__infor {
+  @apply flex flex-col;
+}
+.tripdetail__infor h4 {
+  @apply text-gray-900 tracking-wide text-4xl;
+}
+
+.tripdetail__infor p {
+  @apply text-gray-700 tracking-wide text-3xl;
+}

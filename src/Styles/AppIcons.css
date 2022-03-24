@@ -1,0 +1,12 @@
+.icon__container {
+  @apply hover:bg-gray-200 flex flex-col justify-center items-center h-44 w-72 bg-white border gap-5 cursor-pointer;
+}
+.icon__container:hover {
+  @apply bg-gray-300 rounded-2xl transition-all duration-300 text-gray-700 shadow-2xl;
+}
+.icon__name {
+  @apply text-6xl text-yellow-600;
+}
+.icon__subcontainer {
+  @apply flex flex-col items-center gap-5;
+}

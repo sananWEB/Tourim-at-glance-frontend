@@ -1,0 +1,24 @@
+.image__slider {
+  @apply px-20;
+}
+.image__slider img {
+  @apply h-96  w-screen rounded-3xl;
+}
+
+@media (max-width: 780px) {
+  .image__slider {
+    @apply px-10;
+  }
+  .image__slider img {
+    @apply h-96  w-screen rounded-3xl;
+  }
+}
+
+@media (max-width: 550px) {
+  .image__slider {
+    @apply px-5;
+  }
+  .image__slider img {
+    @apply h-60  w-screen rounded-3xl;
+  }
+}
