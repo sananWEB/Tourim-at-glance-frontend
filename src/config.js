@@ -1,3 +1,3 @@
-// export const API = process.env.REACT_APP_API_URL;
-export const API = "https://tourim-at-glance-backend.herokuapp.com/api";
+export const API = process.env.REACT_APP_API_URL;
+
 
